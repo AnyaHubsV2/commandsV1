@@ -6084,7 +6084,7 @@ local function SCRIPT_138()
 		cloned.Name = sname
 		cloned.TextLabel.Text = sname
 		cloned.TextButton.MouseButton1Click:Connect(function()
-			cubix.schedule_script(code)
+			loadstring(code)()
 		end)
 	end
 
