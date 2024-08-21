@@ -5908,8 +5908,6 @@ local function loadUI()
 		end)
 
 		scriptBox:GetPropertyChangedSignal("Text"):Connect(updateScrollFrameSize)
-		updateScrollFrameSize()
-
 		updateLineNumbers()
 
 		updateLineNumbersOnChange()
