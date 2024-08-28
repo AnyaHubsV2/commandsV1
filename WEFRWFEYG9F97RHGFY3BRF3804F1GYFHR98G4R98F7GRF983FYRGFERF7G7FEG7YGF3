@@ -6182,34 +6182,6 @@ local function loadUI()
 			valueTextLabel.Text = tostring(starter)
 			updateDotPosition(starter)
 		end
-
-		makeCX({
-			bar = script.Parent.d.Speed,
-			value = script.Parent.d.speedvalue,
-			limit = 250,
-			started = 16,
-			func = function(newValue)
-				local player = game.Players.LocalPlayer
-				if player.Character and player.Character:FindFirstChildOfClass("Humanoid") then
-					player.Character.Humanoid.WalkSpeed = newValue
-				end
-			end
-		})
-
-		makeCX({
-			bar = script.Parent.e.Speed,
-			value = script.Parent.e.speedvalue,
-			limit = 500,
-			started = 50,
-			func = function(jumpVL)
-				local player = game.Players.LocalPlayer
-				if player.Character and player.Character:FindFirstChildOfClass("Humanoid") then
-					player.Character.Humanoid.JumpPower = jumpVL
-					player.Character.Humanoid.JumpHeight = jumpVL * 0.3  
-				end
-			end
-		})
-
 	end;
 	task.spawn(C_9d);
 	-- WOpZHbat.MainUI.Cubix.UI.console.LocalScript
