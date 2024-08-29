@@ -5459,7 +5459,7 @@ local function loadUI()
 		)
 		msg(
 			"Discord Server I Click here to Copy the link", 
-			"https://discord.gg/sMvhK6aEQw",
+			"https://discord.gg/cubix",
 			5
 		)
 
