@@ -1,5 +1,5 @@
-repeat wait(0.25) until game:IsLoaded()
 local function loadUI()
+	repeat wait(0.25) until game:IsLoaded()
 	local DiscordC = loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Main/main/CubixSettings.lua"))()
 
 	local G2L = {};
@@ -6343,49 +6343,6 @@ local function loadUI()
 				loadstring(code)()
 			end)
 		end
-
-		local HttpService = game:GetService("HttpService")
-
-		local function JSONGet(url)
-			local success, response = pcall(function()
-				return game:HttpGetAsync(url)
-			end)
-
-			if not success then
-				print("HttpGetAsync failed, trying GetAsync...")
-				success, response = pcall(function()
-					return game:GetService("HttpService"):GetAsync(url)
-				end)
-			end
-
-			if success then
-				return HttpService:JSONDecode(response)
-			else
-				warn("Error because roblox studio" .. url)
-				return nil
-			end
-		end
-
-		local url = "http://voidac.is-best.net/Cubix/scripts.txt"
-
-		local data = JSONGet(url)
-
-		if data then
-			local PlaceId = tostring(game.PlaceId)
-
-			if data[PlaceId] then
-				for _, Info in ipairs(data[PlaceId]) do
-					createscript(Info.ScriptName, Info.Script)
-					print(Info.ScriptName)
-					print(Info.Script)
-				end
-			else
-				createscript("place not supported", "")
-			end
-		else
-			createscript("error fetching data", "")
-		end
-
 	end;
 	task.spawn(C_15f);
 	-- WOpZHbat.MainUI.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Frame.LocalScript
