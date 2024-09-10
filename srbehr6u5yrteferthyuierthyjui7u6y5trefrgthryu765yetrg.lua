@@ -5705,14 +5705,16 @@ local function loadUI()
 			end
 		end
 
-		local function LoadSettings()
-			if isfile(FileName) then
-				Setting = HttpService:JSONDecode(readfile(FileName))
-				if scriptBox then
-					scriptBox.Text = Setting.Textbox
-				end
-			end
+local function LoadSettings()
+	if isfile(FileName) then
+		Setting = HttpService:JSONDecode(readfile(FileName))
+		if scriptBox then
+			scriptBox.Text = Setting.Textbox
 		end
+	else
+
+	end
+end
 
 		local function SaveTextBoxText(textBox)
 			if textBox then
